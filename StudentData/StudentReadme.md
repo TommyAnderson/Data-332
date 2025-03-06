@@ -2,7 +2,7 @@
 
 ## Students Per Major
 <p> Description </p>
-<img src="StudentData/studentsPerMajor.png" height = 250, width = 400>
+<img src="studentsPerMajor.png" height = 250, width = 400>
 
 ## Student Birth Years
 
