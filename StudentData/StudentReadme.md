@@ -6,7 +6,7 @@
 
 ## Student Birth Years
 <p> Most of the students are born in 200, with am almost equal distribution otherwise  </p>
-<img src="studentBirthYears.png" height = 250, width = 400>
+<img src="studentBirthYears.png">
 
 ## Cost Per Major
 <p> Most people on a payment plan do not have as much total cost </p>
