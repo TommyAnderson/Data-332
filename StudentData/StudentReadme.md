@@ -10,4 +10,4 @@
 <img src="costPerMajor.png" height = 250, width = 400>
 
 ## Balance Due Per Major
-<img src="rbalancePerMajor.png" height = 250, width = 400>
+<img src="balancePerMajor.png" height = 250, width = 400>
