@@ -1,17 +1,13 @@
 # Data for all students at X College
 
 ## Students Per Major
-<p> Description </p>
 <img src="studentsPerMajor.png" height = 250, width = 400>
 
 ## Student Birth Years
-
-<p> Description </p>
+<img src="studentBirthYears.png" height = 250, width = 400>
 
 ## Cost Per Major
-
-<p> Description </p>
+<img src="costPerMajor.png" height = 250, width = 400>
 
 ## Balance Due Per Major
-
-<p> Description </p>
+<img src="rbalancePerMajor.png" height = 250, width = 400>
