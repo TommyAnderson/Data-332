@@ -1,7 +1,7 @@
 # Data for all students at X College
 
 ## Students Per Major
-<p> Each students major, by major with data science being the thing </p>
+<p> Each students major, by major with data science being the most popular </p>
 <img src="studentsPerMajor.png" height = 250, width = 400>
 
 ## Student Birth Years
