@@ -92,7 +92,7 @@ This code identifies the top 15 most frequent positive words in the complaints. 
 
 Here we see that there are some words that could have been taken out of context.
 
-## Results and Predictions
+## Results and Conclusion
 The sentiment analysis identified several positive words, such as refund, protection, and recovery, which, upon closer examination, appear out of context in the complaints dataset. These words, while typically positive, are used in this case to describe issues or complaints, such as problems with refunds, lack of protection, or the need for recovery. A word that is generally positive may not always convey a positive sentiment in every scenario. Therefore, further refinement of the bing sentiment analysis approach may be necessary to account for context and improve the accuracy of sentiment classification in this dataset.
 
 
