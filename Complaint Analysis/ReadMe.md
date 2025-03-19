@@ -1,4 +1,4 @@
-#Complaint Analysis
+# Complaint Analysis
 
 ## Introduction
 This project analyzes consumer complaints using sentiment analysis in R. The analysis includes:
