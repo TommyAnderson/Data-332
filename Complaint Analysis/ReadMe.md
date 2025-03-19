@@ -45,7 +45,9 @@ wordcloud2(word_freq[1:100, ])
 ```
 This part of the code calculates the frequency of each word in the tokenized complaints. It then generates an interactive word cloud to visually represent the top 100 most frequent words, providing a quick overview of common terms mentioned in the complaints.
 
-!<img src = "wordCloud.png" width = "450")>
+![wordCloud](https://github.com/user-attachments/assets/9f49692d-f074-44a2-8f11-985b3fd23ad3)
+
+There are lots of words commonly found in complaints, but when looking at the sentiment analysis, we see something different.
 
 ## Plotting Negative vs Positive Words
 ```
@@ -62,6 +64,10 @@ ggplot(bing_sentiment, aes(x = sentiment, y = n, fill = sentiment)) +
   theme_minimal()
 ```
 This code visualizes the distribution of positive and negative words in the complaints by creating a bar plot. It sets custom colors for the positive and negative sentiments and labels the y-axis with human-readable numbers. The plot provides a clear comparison of sentiment occurrences in the complaint data.
+
+![negativePositive](https://github.com/user-attachments/assets/fd56eee3-70cf-4764-93a2-6adf95dbd094)
+
+There are a lot of positive words in here. These are complaints, so there would be expectations that there were little to no positive words in the complaints.
 
 ## Finding Positive Word Frequency
 ```
@@ -81,6 +87,10 @@ ggplot(top_positive_words, aes(x = reorder(word, n), y = n, fill = word)) +
 
 ```
 This code identifies the top 15 most frequent positive words in the complaints. It filters the bing_sentiment data for positive sentiments, counts the frequency of each positive word, and creates a horizontal bar plot. This visualization helps to highlight the positive aspects that consumers are mentioning in their complaints.
+
+![commontPositive](https://github.com/user-attachments/assets/9d385611-62fa-449e-a39d-560d4417c125)
+
+Here we see that there are some words that could have been taken out of context.
 
 ## Results and Predictions
 The sentiment analysis identified several positive words, such as refund, protection, and recovery, which, upon closer examination, appear out of context in the complaints dataset. These words, while typically positive, are used in this case to describe issues or complaints, such as problems with refunds, lack of protection, or the need for recovery. A word that is generally positive may not always convey a positive sentiment in every scenario. Therefore, further refinement of the bing sentiment analysis approach may be necessary to account for context and improve the accuracy of sentiment classification in this dataset.
