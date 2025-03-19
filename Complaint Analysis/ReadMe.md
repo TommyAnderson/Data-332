@@ -45,6 +45,7 @@ wordcloud2(word_freq[1:100, ])
 ```
 This part of the code calculates the frequency of each word in the tokenized complaints. It then generates an interactive word cloud to visually represent the top 100 most frequent words, providing a quick overview of common terms mentioned in the complaints.
 
+<img src = "wordCloud.png" width = "450")>
 
 ## Plotting Negative vs Positive Words
 ```
