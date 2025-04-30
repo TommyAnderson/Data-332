@@ -1,0 +1,226 @@
+Number ,Time of the day,Speed,Weather ,Date,Plate State ,Color ,Type of Car,Collector Name
+1,4:38: PM,31,Sunny ,4/7/2025,IL,Grey,Sedan ,Diya
+2,4:38: PM,32,Sunny ,4/7/2025,IA,Black ,SUV,Diya
+3,4:38: PM,30,Sunny ,4/7/2025,NY,Black ,SUV,Diya
+4,4:38: PM,30,Sunny ,4/7/2025,IL,White ,SUV ,Diya
+5,4:41: PM,31,Sunny ,4/7/2025,IL,White ,Van ,Diya
+6,4:44: PM,20,Sunny ,4/7/2025,IL,Grey,Sedan ,Diya
+7,4:45: PM,31,Sunny ,4/7/2025,IL,White ,Truck ,Diya
+8,4:46: PM,29,Sunny ,4/7/2025,IA,White ,Sedan ,Diya
+9,4:46: PM,27,Sunny ,4/7/2025,IA,Red,Truck ,Diya
+10,4:46: PM,34,Sunny ,4/7/2025,IA,Blue,Sedan ,Diya
+11,4:47: PM,33,Sunny ,4/7/2025,IL,Grey,Sedan ,Diya
+12,4:47: PM,21,Sunny ,4/7/2025,IL,Grey ,SUV,Diya
+13,4:48: PM,30,Sunny ,4/7/2025,IL,Grey ,Sedan ,Diya
+14,4:49: PM,36,Sunny ,4/7/2025,IL,Red ,Truck ,Diya
+15,4:50: PM,33,Sunny ,4/7/2025,IA,Black ,Truck ,Diya
+16,4:51: PM,21,Sunny ,4/7/2025,IA ,Red ,Sedan ,Diya
+17,4:51: PM,26,Sunny ,4/7/2025,IL,Grey ,Sedan ,Diya
+18,4:51: PM,10,Sunny ,4/7/2025,IL,White ,SUV ,Diya
+19,4:52: PM,30,Sunny ,4/7/2025,IL,White ,Truck ,Diya
+20,4:52: PM,31,Sunny ,4/7/2025,IL,White ,Truck ,Diya
+21,4:53: PM,31,Sunny ,4/7/2025,IL,Red,Truck ,Diya
+22,4:53: PM,35,Sunny ,4/7/2025,IA,Black ,Truck ,Diya
+23,4:54: PM,21,Sunny ,4/7/2025,IA,Red,Truck ,Diya
+24,4:54: PM,31,Sunny ,4/7/2025,IL,White ,SUV,Diya
+25,4:54: PM,26,Sunny ,4/7/2025,IL,Black ,SUV,Diya
+26,4:54: PM,18,Sunny ,4/7/2025,TX,Black ,SUV,Diya
+27,4:55: PM,16,Sunny ,4/7/2025,IL,Grey,SUV,Diya
+28,4:55: PM,13,Sunny ,4/7/2025,IL,Grey ,SUV,Diya
+29,4:55: PM,30,Sunny ,4/7/2025,IL,White ,Sedan ,Diya
+30,4:55: PM,29,Sunny ,4/7/2025,IL,Black ,Truck ,Diya
+31,4:56: PM,29,Sunny ,4/7/2025,IL,White ,SUV,Diya
+32,4:57: PM,29,Sunny ,4/7/2025,IL,Blue ,SUV,Diya
+33,4:57: PM,37,Sunny ,4/7/2025,IL,Grey ,SUV,Diya
+34,4:57: PM,26,Sunny ,4/7/2025,WI,Grey ,Sedan ,Diya
+35,4:58: PM,25,Sunny ,4/7/2025,IL,Red ,SUV ,Diya
+36,4:58: PM,32,Sunny ,4/7/2025,IL ,Black ,Sedan ,Diya
+37,4:59: PM,32,Sunny ,4/7/2025,IL ,Blue ,SUV,Diya
+38,4:59: PM,32,Sunny ,4/7/2025,IA,Black ,SUV,Diya
+39,5:00: PM,32,Sunny ,4/7/2025,IL,Grey ,Sedan ,Diya
+40,5:00: PM,29,Sunny ,4/7/2025,IL,Black ,Sedan ,Diya
+41,5:00: PM,29,Sunny ,4/7/2025,IA,Red ,SUV,Diya
+42,5:01: PM,28,Sunny ,4/7/2025,IA,Grey ,Sedan ,Diya
+43,5:01: PM,27,Sunny ,4/7/2025,IL,Red,SUV,Diya
+44,5:02: PM,28,Sunny ,4/7/2025,IA,Black ,Sedan ,Diya
+45,5:02: PM,34,Sunny ,4/7/2025,IA,White ,SUV,Diya
+46,5:02: PM,31,Sunny ,4/7/2025,WI,White ,Sedan ,Diya
+47,5:02: PM,25,Sunny ,4/7/2025,IA,Blue ,Truck ,Diya
+48,5:04: PM,36,Sunny ,4/7/2025,IL,Grey ,Sedan ,Diya
+49,5:04: PM,31,Sunny ,4/7/2025,IL,Grey ,SUV,Diya
+50,5:04: PM,33,Sunny ,4/7/2025,IA,White ,Truck ,Diya
+51,5:05: PM,33,Sunny ,4/7/2025,IL,Red,SUV,Diya
+52,5:06: PM,29,Sunny ,4/7/2025,IL,White ,Truck ,Diya
+53,5:06: PM,31,Sunny ,4/7/2025,IA,White ,Sedan ,Diya
+54,5:06: PM,32,Sunny ,4/7/2025,IL,White ,SUV,Diya
+55,5:07: PM,29,Sunny ,4/7/2025,IL,Red,Van ,Diya
+56,5:07: PM,18,Sunny ,4/7/2025,IL,Grey ,Sedan ,Diya
+57,5:08: PM,33,Sunny ,4/7/2025,IA,Red,SUV,Diya
+58,5:08: PM,33,Sunny ,4/7/2025,IL,Black ,Truck ,Diya
+59,5:08: PM,32,Sunny ,4/7/2025,IL,Black ,SUV ,Diya
+60,5:08: PM,31,Sunny ,4/7/2025,IL,Blue ,Sedan ,Diya
+61,5:09: PM,32,Sunny ,4/7/2025,IL,White ,Sedan ,Diya
+62,5:09: PM,32,Sunny ,4/7/2025,IL,White ,Sedan ,Diya
+63,5:09: PM,32,Sunny ,4/7/2025,IL,White ,Sedan ,Diya
+64,5:09: PM,31,Sunny ,4/7/2025,IL,Black ,Sedan ,Diya
+65,5:10: PM,31,Sunny ,4/7/2025,IL,Grey ,SUV,Diya
+66,5:10: PM,33,Sunny ,4/7/2025,IL,Red,SUV,Diya
+67,5:10: PM,33,Sunny ,4/7/2025,NY,White ,SUV,Diya
+68,5:11: PM,32,Sunny ,4/7/2025,WI,Black ,Sedan ,Diya
+69,5:11: PM,29,Sunny ,4/7/2025,FL,White ,Sedan ,Diya
+70,5:11: PM,28,Sunny ,4/7/2025,IA,Yellow ,Sedan ,Diya
+71,5:12: PM,31,Sunny ,4/7/2025,IA,Black ,Sedan ,Diya
+72,5:12: PM,31,Sunny ,4/7/2025,IL,Black ,Sedan ,Diya
+73,5:13: PM,30,Sunny ,4/7/2025,IL,Red,SUV,Diya
+74,5:13: PM,30,Sunny ,4/7/2025,IL,White ,Truck ,Diya
+75,5:14: PM,29,Sunny ,4/7/2025,IA,Blue ,Sedan ,Diya
+76,4:15: PM,39,Cloudy,4/9/2025,IA,Grey,SUV,Tommy
+77,4:16: PM,29,Cloudy,4/9/2025,IL,Blue,SUV,Tommy
+78,4:17: PM,37,Cloudy,4/9/2025,IL,Red,Van,Tommy
+79,4:17: PM,33,Cloudy,4/9/2025,IL,Brown,Truck,Tommy
+80,4:18: PM,33,Cloudy,4/9/2025,iL,Grey,Sedan,Tommy
+81,4:18: PM,21,Cloudy,4/9/2025,IA,Black,Sedan,Tommy
+82,4:19: PM,33,Cloudy,4/9/2025,IA,Red,SUV,Tommy
+83,4:19: PM,31,Cloudy,4/9/2025,IL,Grey,Sedan,Tommy
+84,4:20: PM,37,Cloudy,4/9/2025,IL,Grey,Truck,Tommy
+85,4:20: PM,29,Cloudy,4/9/2025,IL,Black,SUV,Tommy
+86,4:21: PM,30,Cloudy,4/9/2025,IA,Red,Sedan,Tommy
+87,4:21: PM,31,Cloudy,4/9/2025,IL,Blue,Sedan,Tommy
+88,4:22: PM,34,Cloudy,4/9/2025,IL,Grey,Sedan,Tommy
+89,4:22: PM,39,Cloudy,4/9/2025,IL,Grey,SUV,Tommy
+90,4:23: PM,32,Cloudy,4/9/2025,IL,White,Truck,Tommy
+91,4:23: PM,34,Cloudy,4/9/2025,IL,Grey,SUV,Tommy
+92,4:24: PM,30,Cloudy,4/9/2025,IL,Grey,Sedan,Tommy
+93,4:24: PM,30,Cloudy,4/9/2025,IL,Red,Sedan,Tommy
+94,4:25: PM,30,Cloudy,4/9/2025,IL,Black,Truck,Tommy
+95,4:25: PM,36,Cloudy,4/9/2025,IL,White,Sedan,Tommy
+96,4:26: PM,33,Cloudy,4/9/2025,IA,Grey,SUV,Tommy
+97,4:26: PM,34,Cloudy,4/9/2025,IL,White,Sedan,Tommy
+98,4:27: PM,24,Cloudy,4/9/2025,IL,Grey,Sedan,Tommy
+99,4:27: PM,26,Cloudy,4/9/2025,IL,Black,SUV,Tommy
+100,4:28: PM,32,Cloudy,4/9/2025,IL,Red,Truck,Tommy
+101,4:28: PM,35,Cloudy,4/9/2025,IA,Grey,Truck,Tommy
+102,4:29: PM,37,Cloudy,4/9/2025,IL,Blue,Sedan,Tommy
+103,4:29: PM,37,Cloudy,4/9/2025,IL,Black,SUV,Tommy
+104,4:30: PM,31,Cloudy,4/9/2025,IA,White,Truck,Tommy
+105,4:30: PM,34,Cloudy,4/9/2025,IL,Grey,Sedan,Tommy
+106,4:31: PM,31,Cloudy,4/9/2025,IL,Red,Sedan,Tommy
+107,4:31: PM,28,Cloudy,4/9/2025,IA,Red,Sedan,Tommy
+108,4:32: PM,30,Cloudy,4/9/2025,WI,White,Sedan,Tommy
+109,4:32: PM,30,Cloudy,4/9/2025,IL,Grey,SUV,Tommy
+110,4:33: PM,32,Cloudy,4/9/2025,IA,Blue,Truck,Tommy
+111,4:33: PM,34,Cloudy,4/9/2025,IA,Grey,Sedan,Tommy
+112,4:34: PM,38,Cloudy,4/9/2025,IL,White,Sedan,Tommy
+113,4:34: PM,31,Cloudy,4/9/2025,IL,Black,Sedan,Tommy
+114,4:35: PM,30,Cloudy,4/9/2025,IA,Red,Sedan,Tommy
+115,4:35: PM,34,Cloudy,4/9/2025,IA,Grey,Sedan,Tommy
+116,4:36: PM,36,Cloudy,4/9/2025,IA,Grey,SUV,Tommy
+117,4:36: PM,31,Cloudy,4/9/2025,NY,White,SUV,Tommy
+118,4:37: PM,26,Cloudy,4/9/2025,IL,White,Sedan,Tommy
+119,4:37: PM,34,Cloudy,4/9/2025,IL,Black,Sedan,Tommy
+120,4:38: PM,34,Cloudy,4/9/2025,IL,Blue,Truck,Tommy
+121,4:38: PM,32,Cloudy,4/9/2025,IA,Red,SUV,Tommy
+122,4:39: PM,34,Cloudy,4/9/2025,IA,White,Truck,Tommy
+123,4:39: PM,34,Cloudy,4/9/2025,IA,Green,SUV,Tommy
+124,4:40: PM,31,Cloudy,4/9/2025,IA,Grey,Sedan,Tommy
+125,4:40: PM,32,Cloudy,4/9/2025,IA,Red,Truck,Tommy
+126,4:41: PM,36,Cloudy,4/9/2025,IL,Black,SUV,Tommy
+127,4:41: PM,32,Cloudy,4/9/2025,IL,White,Sedan,Tommy
+128,4:42: PM,35,Cloudy,4/9/2025,IL,Grey,Truck,Tommy
+129,4:42: PM,38,Cloudy,4/9/2025,IL,Black,Truck,Tommy
+130,4:43: PM,34,Cloudy,4/9/2025,IA,White,SUV,Tommy
+131,4:43: PM,36,Cloudy,4/9/2025,IA,Red,Sedan,Tommy
+132,4:44: PM,37,Cloudy,4/9/2025,IL,Blue,Sedan,Tommy
+133,4:44: PM,36,Cloudy,4/9/2025,IL,Grey,Truck,Tommy
+134,4:45: PM,32,Cloudy,4/9/2025,NE,White,SUV,Tommy
+135,4:45: PM,34,Cloudy,4/9/2025,IL,Red,Truck,Tommy
+136,4:46: PM,34,Cloudy,4/9/2025,IL,Black,SUV,Tommy
+137,4:46: PM,34,Cloudy,4/9/2025,IA,Blue,SUV,Tommy
+138,4:47: PM,37,Cloudy,4/9/2025,IA,Grey,Sedan,Tommy
+139,4:47: PM,38,Cloudy,4/9/2025,IL,Red,Truck,Tommy
+140,4:48: PM,39,Cloudy,4/9/2025,IL,White,SUV,Tommy
+141,4:48: PM,27,Cloudy,4/9/2025,IA,Brown,SUV,Tommy
+142,4:49: PM,28,Cloudy,4/9/2025,IL,Black,Truck,Tommy
+143,4:49: PM,40,Cloudy,4/9/2025,IA,Grey,Sedan,Tommy
+144,4:50: PM,25,Cloudy,4/9/2025,IL,Red,Truck,Tommy
+145,4:50: PM,32,Cloudy,4/9/2025,IA,White,SUV,Tommy
+146,4:50: PM,32,Cloudy,4/9/2025,IA,Blue,Truck,Tommy
+147,4:50: PM,36,Cloudy,4/9/2025,IL,Black,SUV,Tommy
+148,4:50: PM,35,Cloudy,4/9/2025,IL,Red,Sedan,Tommy
+149,4:50: PM,31,Cloudy,4/9/2025,IL,White,SUV,Tommy
+150,4:50: PM,43,Cloudy,4/9/2025,WI,Grey,SUV,Tommy
+151,2:15: PM,31,Windy,4/14/2025,IL,Red,Sedan,Philip
+152,2:15: PM,30,Windy,4/14/2025,IL,Grey,SUV,Philip
+153,2:15: PM,29,Windy,4/14/2025,IL,Grey,Sedan,Philip
+154,2:17: PM,28,Windy,4/14/2025,IA,Black,Truck,Philip
+155,2:17: PM,33,Windy,4/14/2025,IL,Grey,Sedan,Philip
+156,2:17: PM,30,Windy,4/14/2025,IA,Blue,Truck,Philip
+157,2:20: PM,31,Windy,4/14/2025,IL,Black,SUV,Philip
+158,2:20: PM,32,Windy,4/14/2025,IL,Yellow ,Coupe,Philip
+159,2:20: PM,29,Windy,4/14/2025,IA,Grey,Minivan,Philip
+160,2:20: PM,27,Windy,4/14/2025,IA,Black,SUV,Philip
+161,2:22: PM,35,Windy,4/14/2025,FL,Blue,Truck,Philip
+162,2:22: PM,29,Windy,4/14/2025,IL,Grey,SUV,Philip
+163,2:23: PM,30,Windy,4/14/2025,IL,Red,Coupe,Philip
+164,2:23: PM,31,Windy,4/14/2025,IA,Grey,Sedan,Philip
+165,2:23: PM,32,Windy,4/14/2025,WI,Black,Sedan,Philip
+166,2:23: PM,31,Windy,4/14/2025,WI,Black,SUV,Philip
+167,2:24: PM,34,Windy,4/14/2025,IL,Grey,Sedan,Philip
+168,2:25: PM,33,Windy,4/14/2025,IL,Red,SUV,Philip
+169,2:25: PM,34,Windy,4/14/2025,IA,Blue,Truck,Philip
+170,2:25: PM,32,Windy,4/14/2025,IA,White,Sedan,Philip
+171,2:30: PM,27,Windy,4/14/2025,IL,Red,SUV,Philip
+172,2:30: PM,28,Windy,4/14/2025,IL,Grey,Sedan,Philip
+173,2:32: PM,33,Windy,4/14/2025,WI,Black,Truck,Philip
+174,2:33: PM,32,Windy,4/14/2025,IL,Grey,Sedan,Philip
+175,2:33: PM,26,Windy,4/14/2025,IL,Black,SUV,Philip
+176,2:33: PM,29,Windy,4/14/2025,IL,Black,SUV,Philip
+177,2:34: PM,29,Windy,4/14/2025,IA,Grey,SUV,Philip
+178,2:34: PM,29,Windy,4/14/2025,IL,Red,Truck,Philip
+179,2:34: PM,30,Windy,4/14/2025,IL,Grey,Coupe,Philip
+180,2:34: PM,29,Windy,4/14/2025,IA,Black,Sedan,Philip
+181,2:36: PM,31,Windy,4/14/2025,IL,Grey,Sedan,Philip
+182,2:36: PM,31,Windy,4/14/2025,IL,White,SUV,Philip
+183,2:36: PM,30,Windy,4/14/2025,PA,Blue,Truck,Philip
+184,2:37: PM,35,Windy,4/14/2025,IL,Black,SUV,Philip
+185,2:37: PM,34,Windy,4/14/2025,IL,White,SUV,Philip
+186,2:40: PM,38,Windy,4/14/2025,IA,Black,Coupe,Philip
+187,2:42: PM,34,Windy,4/14/2025,IL,Grey,SUV,Philip
+188,2:42: PM,26,Windy,4/14/2025,IL,White,SUV,Philip
+189,2:42: PM,27,Windy,4/14/2025,IL,White,SUV,Philip
+190,2:44: PM,33,Windy,4/14/2025,IL,Black,SUV,Philip
+191,2:44: PM,34,Windy,4/14/2025,IL,Grey,Sedan,Philip
+192,2:44: PM,29,Windy,4/14/2025,IL,Grey,Truck,Philip
+193,2:44: PM,30,Windy,4/14/2025,IL,Blue,Truck,Philip
+194,2:49: PM,39,Windy,4/14/2025,IA,Blue,Truck,Philip
+195,2:49: PM,36,Windy,4/14/2025,IA,Red,Sedan,Philip
+196,2:50: PM,30,Windy,4/14/2025,IL,Grey,Sedan,Philip
+197,2:52: PM,33,Windy,4/14/2025,IL,Grey,SUV,Philip
+198,2:52: PM,26,Windy,4/14/2025,IL,Black,SUV,Philip
+199,2:52: PM,18,Windy,4/14/2025,WI,Black,Truck,Philip
+200,2:58: PM,29,Windy,4/14/2025,IL,White,SUV,Philip
+201,3:00: PM,31,Windy,4/14/2025,IL,White,SUV,Philip
+202,3:00: PM,33,Windy,4/14/2025,IA,Black,Sedan,Philip
+203,3:00: PM,29,Windy,4/14/2025,IL,Grey,SUV,Philip
+204,3:00: PM,30,Windy,4/14/2025,IA,Brown,SUV,Philip
+205,3:01: PM,30,Windy,4/14/2025,IL,Red,SUV,Philip
+206,3:01: PM,31,Windy,4/14/2025,IL,Black,Sevan,Philip
+207,3:03: PM,37,Windy,4/14/2025,IL,Red,Minivan,Philip
+208,3:03: PM,35,Windy,4/14/2025,IA,Blue,Truck,Philip
+209,3:05: PM,28,Windy,4/14/2025,IL,White,SUV,Philip
+210,3:05: PM,30,Windy,4/14/2025,IL,Red,Sedan,Philip
+211,3:05: PM,30,Windy,4/14/2025,IA,White,SUV,Philip
+212,3:08: PM,31,Windy,4/14/2025,IL,Red,Truck,Philip
+213,3:08: PM,31,Windy,4/14/2025,IA,White,Minivan,Philip
+214,3:09: PM,35,Windy,4/14/2025,IL,Grey,Sedan,Philip
+215,3:10: PM,30,Windy,4/14/2025,IL,Black,Sedan,Philip
+216,3:10: PM,28,Windy,4/14/2025,IA,Black,Sedan,Philip
+217,3:11: PM,32,Windy,4/14/2025,IL,Blue,Truck,Philip
+218,3:11: PM,32,Windy,4/14/2025,IL,Grey,Sedan,Philip
+219,3:12: PM,29,Windy,4/14/2025,IA,Grey,Truck,Philip
+220,3:12: PM,30,Windy,4/14/2025,FL,White,SUV,Philip
+221,3:12: PM,30,Windy,4/14/2025,WI,Blue,SUV,Philip
+222,3:12: PM,31,Windy,4/14/2025,IA,White,SUV,Philip
+223,3:14: PM,34,Windy,4/14/2025,IL,White,Minivan,Philip
+224,3:14: PM,26,Windy,4/14/2025,IA,Red,Truck,Philip
+225,3:15: PM,19,Windy,4/14/2025,IL,Black,SUV,Philip
