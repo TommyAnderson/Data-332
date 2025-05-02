@@ -1,0 +1,12 @@
+name: AndersonUber
+title: AndersonUber
+username: tommyanderson
+account: tommyanderson
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 14667327
+bundleId: 10220886
+url: https://tommyanderson.shinyapps.io/AndersonUber/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
