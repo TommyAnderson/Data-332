@@ -6,27 +6,20 @@ File Structure
 
 ```
 Uber Project/
+├── Data			 # Storage for data
 ├── app.R           # Main Shiny application  
 └── README.md       # Project documentation
 ```
 
 Prerequisites
 
-R (>= 4.0)
 
 Packages: shiny, ggplot2, dplyr, DT, rsconnect, readxl, RCurl, lubridate, janitor, purrr, leaflet, scales, bslib
 
-Install dependencies with:
-```
-install.packages(c(
-  "shiny","ggplot2","dplyr","DT","rsconnect","readxl",
-  "RCurl","lubridate","janitor","purrr","leaflet","scales","bslib"
-))
-```
 
 Data Loading
 
-We download and bind CSVs directly from GitHub raw URLs:
+Download and bind CSVs directly from GitHub raw URLs:
 ```
 urls <- c(
   apr  = "https://raw.githubusercontent.com/TommyAnderson/Data-332/main/Uber%20Project/Data/uber-raw-data-apr14.csv",
@@ -114,7 +107,6 @@ output$map <- renderLeaflet({
 ```
 Deployment
 
-The app is deployed at: https://yourusername.shinyapps.io/uber-rides-2014/
+The app is deployed at: https://tommyanderson.shinyapps.io/AndersonUber/
 
-Feel free to tweak colors, fonts, and theme settings in app.R to match your style.
 
