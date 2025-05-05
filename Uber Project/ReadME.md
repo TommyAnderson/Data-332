@@ -16,25 +16,39 @@ Prerequisites
 
 Packages: shiny, ggplot2, dplyr, DT, rsconnect, readxl, RCurl, lubridate, janitor, purrr, leaflet, scales, bslib
 
+First the data was cleaned in a separate file to an rds file
+```
+uber_data <- csv_files %>%
+  set_names(basename(.)) %>%                      
+  map_dfr(read_csv, .id = "raw_file") %>%       
+  clean_names() %>%                                
+  rename(
+    lat = any_of(c("lat","latitude")),
+    lon = any_of(c("lon","longitude"))
+  ) %>%
+  mutate(
+    date_time = mdy_hms(date_time),
+    date      = as_date(date_time),
+    month     = month(date_time, label = TRUE, abbr = FALSE),
+    day       = day(date_time),
+    hour      = hour(date_time),
+    wday      = wday(date_time, label = TRUE),
+    week      = week(date_time)
+  )
+```
+
 
 Data Loading
 
 Download and bind CSVs directly from GitHub raw URLs:
 ```
-urls <- c(
-  apr  = "https://raw.githubusercontent.com/TommyAnderson/Data-332/main/Uber%20Project/Data/uber-raw-data-apr14.csv",
-  may  = "https://raw.githubusercontent.com/TommyAnderson/Data-332/main/Uber%20Project/Data/uber-raw-data-may14.csv",
-  jun  = "https://raw.githubusercontent.com/TommyAnderson/Data-332/main/Uber%20Project/Data/uber-raw-data-jun14.csv",
-  jul  = "https://raw.githubusercontent.com/TommyAnderson/Data-332/main/Uber%20Project/Data/uber-raw-data-jul14.csv",
-  aug  = "https://raw.githubusercontent.com/TommyAnderson/Data-332/main/Uber%20Project/Data/uber-raw-data-aug14.csv",
-  sep  = "https://raw.githubusercontent.com/TommyAnderson/Data-332/main/Uber%20Project/Data/uber-raw-data-sep14.csv"
-)
-data_list <- lapply(urls, read.csv, stringsAsFactors = FALSE)
-uber_data <- bind_rows(data_list, .id = "month")
+rds_path <- file.path("Data Clean", "uber_data_all.rds")
+
+uber_data <- readRDS(rds_path)
 ```
 Data Cleaning
 
-Clean column names and extract date/time features:
+Clean column names and extract date/time features, also in the separate cleaning file
 ```
 uber_data <- uber_data %>%
   clean_names() %>%
@@ -88,22 +102,26 @@ Geospatial Map
 
 Clustered circle markers for performance:
 ```
-output$map <- renderLeaflet({
-  leaflet(uber_data) %>%
-    addProviderTiles(providers$CartoDB.Positron) %>%
-    addCircleMarkers(
-      lng            = ~lon,
-      lat            = ~lat,
-      radius         = 4,
-      stroke         = FALSE,
-      fillOpacity    = 0.6,
-      clusterOptions = markerClusterOptions(),
-      popup          = ~paste0(
-                         "<b>Base:</b> ", base, "<br>",
-                         "<b>When:</b> ", format(date_time, "%Y-%m-%d %H:%M")
-                       )
-    )
-})
+  output$map <- renderLeaflet({
+    # sample a subset to reduce server load
+    set.seed(42)
+    sample_df <- uber_data %>% sample_n(min(100000, nrow(uber_data)))
+    coords <- cbind(sample_df$lon, sample_df$lat)
+    kde <- bkde2D(coords, bandwidth = c(0.005, 0.008), gridsize = c(150, 150))
+    r <- raster(list(x = kde$x1, y = kde$x2, z = kde$fhat))
+    r[r[] < 1] <- NA
+    pal <- colorNumeric("Spectral", domain = r[], na.color = "transparent")
+    
+    leaflet() %>%
+      addProviderTiles(providers$CartoDB.Positron) %>%
+      addRasterImage(r, colors = pal, opacity = 0.6) %>%
+      addLegend("bottomright", pal = pal, values = r[], title = "Density") %>%
+      fitBounds(
+        lng1 = min(sample_df$lon, na.rm = TRUE), lat1 = min(sample_df$lat, na.rm = TRUE),
+        lng2 = max(sample_df$lon, na.rm = TRUE), lat2 = max(sample_df$lat, na.rm = TRUE)
+      )
+  })
+}
 ```
 Deployment
 

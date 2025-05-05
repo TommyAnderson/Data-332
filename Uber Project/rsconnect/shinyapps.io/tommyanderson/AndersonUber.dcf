@@ -5,8 +5,9 @@ account: tommyanderson
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 14673502
-bundleId: 10221385
+bundleId: 10233889
 url: https://tommyanderson.shinyapps.io/AndersonUber/
 version: 1
 asMultiple: FALSE
 asStatic: FALSE
+ignoredFiles: Data Raw

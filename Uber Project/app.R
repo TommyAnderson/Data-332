@@ -8,42 +8,19 @@ library(lubridate)
 library(janitor)
 library(purrr)
 library(leaflet)
-library(leaflet.extras)
-library(leaflet.extras2)
-library(raster)
-library(KernSmooth) 
+library(KernSmooth)
+library(raster)      
 library(scales)
 library(bslib)
 
 # Remove any existing objects
 rm(list = ls())
 
-# Load and bind CSV data from GitHub
-urls <- c(
-  apr = "https://raw.githubusercontent.com/TommyAnderson/Data-332/main/Uber%20Project/Data/uber-raw-data-apr14.csv",
-  may = "https://raw.githubusercontent.com/TommyAnderson/Data-332/main/Uber%20Project/Data/uber-raw-data-may14.csv",
-  jun = "https://raw.githubusercontent.com/TommyAnderson/Data-332/main/Uber%20Project/Data/uber-raw-data-jun14.csv",
-  jul = "https://raw.githubusercontent.com/TommyAnderson/Data-332/main/Uber%20Project/Data/uber-raw-data-jul14.csv",
-  aug = "https://raw.githubusercontent.com/TommyAnderson/Data-332/main/Uber%20Project/Data/uber-raw-data-aug14.csv",
-  sep = "https://raw.githubusercontent.com/TommyAnderson/Data-332/main/Uber%20Project/Data/uber-raw-data-sep14.csv"
-)
 
-data_list <- lapply(urls, read.csv, stringsAsFactors = FALSE)
-data_list <- lapply(data_list, clean_names)
-uber_data <- bind_rows(data_list, .id = "raw_month") %>%
-  rename(
-    lat = any_of(c("lat","latitude")),
-    lon = any_of(c("lon","longitude"))
-  ) %>%
-  mutate(
-    date_time = mdy_hms(date_time),
-    date      = as_date(date_time),
-    month     = month(date_time, label = TRUE, abbr = FALSE),
-    day       = day(date_time),
-    hour      = hour(date_time),
-    wday      = wday(date_time, label = TRUE),
-    week      = week(date_time)
-  )
+rds_path <- file.path("Data Clean", "uber_data_all.rds")
+
+uber_data <- readRDS(rds_path)
+
 
 # Pre-compute summary tables
 by_month      <- uber_data %>% count(month)
@@ -122,55 +99,70 @@ server <- function(input, output, session) {
   
   # Hourly
   output$plot_hour       <- renderPlot({
-    ggplot(by_hour, aes(hour, n)) + geom_line(group = 1) + scale_y_continuous(labels = comma) + theme_minimal()
+    ggplot(by_hour, aes(hour, n)) +
+      geom_line(group = 1) +
+      scale_y_continuous(labels = comma) +
+      theme_minimal()
   })
   output$plot_hour_month <- renderPlot({
-    ggplot(by_hour_month, aes(hour, n, color = month)) + geom_line() + theme_minimal()
+    ggplot(by_hour_month, aes(hour, n, color = month)) +
+      geom_line() +
+      theme_minimal()
   })
   output$tbl_hour <- renderDT(datatable(by_hour, colnames = c("Hour","Trips")))
   
   # Daily
   output$plot_day_of_month <- renderPlot({
-    ggplot(by_day_month, aes(day, n, fill = month)) + geom_col(position = "dodge") + theme_minimal()
+    ggplot(by_day_month, aes(day, n, fill = month)) +
+      geom_col(position = "dodge") +
+      theme_minimal()
   })
   output$plot_wday_month   <- renderPlot({
-    ggplot(by_wday_month, aes(wday, n, fill = month)) + geom_col(position = "dodge") + theme_minimal()
+    ggplot(by_wday_month, aes(wday, n, fill = month)) +
+      geom_col(position = "dodge") +
+      theme_minimal()
   })
   output$tbl_day_month <- renderDT(datatable(by_day_month, colnames = c("Day","Month","Trips")))
   
   # Base × Month
   output$plot_base_month <- renderPlot({
-    ggplot(by_base_month, aes(base, n, fill = month)) + geom_col(position = "dodge") + scale_y_continuous(labels = comma) + theme_minimal()
+    ggplot(by_base_month, aes(base, n, fill = month)) +
+      geom_col(position = "dodge") +
+      scale_y_continuous(labels = comma) +
+      theme_minimal()
   })
   
   # Heatmaps
   heatmap_plot <- function(df, x, y, title) {
-    ggplot(df, aes_string(x = x, y = y, fill = "n")) + geom_tile() + theme_minimal()
+    ggplot(df, aes_string(x = x, y = y, fill = "n")) +
+      geom_tile() +
+      theme_minimal()
   }
-  output$hm_hour_wday  <- renderPlot({ heatmap_plot(hm_hour_wday,  "hour",  "wday",        "Hour vs. Weekday")  })
-  output$hm_month_day  <- renderPlot({ heatmap_plot(hm_month_day,  "month", "day",        "Month vs. Day")      })
-  output$hm_month_week <- renderPlot({ heatmap_plot(hm_month_week, "month", "week",       "Month vs. Week")     })
-  output$hm_base_wday  <- renderPlot({ heatmap_plot(hm_base_wday,  "base",  "wday",      "Base vs. Weekday") })
+  output$hm_hour_wday  <- renderPlot({ heatmap_plot(hm_hour_wday,  "hour",  "wday",        "Hour vs Weekday")  })
+  output$hm_month_day  <- renderPlot({ heatmap_plot(hm_month_day,  "month", "day",        "Month vs Day")      })
+  output$hm_month_week <- renderPlot({ heatmap_plot(hm_month_week, "month", "week",       "Month vs Week")     })
+  output$hm_base_wday  <- renderPlot({ heatmap_plot(hm_base_wday,  "base",  "wday",      "Base vs Weekday") })
   
+  # Map: kernel density via raster (sampled subset)
   output$map <- renderLeaflet({
-    leaflet(uber_data) %>%
+    # sample a subset to reduce server load
+    set.seed(42)
+    sample_df <- uber_data %>% sample_n(min(100000, nrow(uber_data)))
+    coords <- cbind(sample_df$lon, sample_df$lat)
+    kde <- bkde2D(coords, bandwidth = c(0.005, 0.008), gridsize = c(150, 150))
+    r <- raster(list(x = kde$x1, y = kde$x2, z = kde$fhat))
+    r[r[] < 1] <- NA
+    pal <- colorNumeric("Spectral", domain = r[], na.color = "transparent")
+    
+    leaflet() %>%
       addProviderTiles(providers$CartoDB.Positron) %>%
-      addHeatmap(
-        lng    = ~lon,
-        lat    = ~lat,
-        blur   = 20,     # adjust to your taste
-        max    = 0.05,
-        radius = 15
-      ) %>%
+      addRasterImage(r, colors = pal, opacity = 0.6) %>%
+      addLegend("bottomright", pal = pal, values = r[], title = "Density") %>%
       fitBounds(
-        lng1 = min(uber_data$lon, na.rm = TRUE),
-        lat1 = min(uber_data$lat, na.rm = TRUE),
-        lng2 = max(uber_data$lon, na.rm = TRUE),
-        lat2 = max(uber_data$lat, na.rm = TRUE)
+        lng1 = min(sample_df$lon, na.rm = TRUE), lat1 = min(sample_df$lat, na.rm = TRUE),
+        lng2 = max(sample_df$lon, na.rm = TRUE), lat2 = max(sample_df$lat, na.rm = TRUE)
       )
   })
-  
-  
 }
 
 # Launch the application
